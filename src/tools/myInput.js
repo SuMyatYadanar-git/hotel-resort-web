@@ -2,8 +2,8 @@ import React from 'react'
 import * as Colors from '../config/color.config'
 
 const MyInput = (props) => {
-    const { style, className, value, placeHolder, type, id } = props
-    const defaultStyle = { width: '100%', padding: 20, fontSize: 12}
+    const { style, className, value, placeHolder, type, id,height,width } = props
+    const defaultStyle = { width: width===undefined?'100%':width, padding: 20, fontSize: 12,height:`${height}`}
     const userStyle = style === undefined ? {} : style
     return (
         <input

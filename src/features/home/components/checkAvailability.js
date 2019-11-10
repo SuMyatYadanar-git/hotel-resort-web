@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
+import originalMoment from 'moment'
+import { extendMoment } from 'moment-range'
+
 import MyDatePicker from '../../../tools/myDatePicker'
 import MyDropDown from '../../../tools/myDropDown'
 import MyButton from '../../../tools/myButton'
-import originalMoment from 'moment'
-import { extendMoment } from 'moment-range'
 import * as Colors from '../../../config/color.config'
 
 const AvailabilityCheck = props => {
@@ -34,7 +35,7 @@ const AvailabilityCheck = props => {
                 </div>
                 <div className='flex-fill m-1' >
                     <span>DEPATURE DATE</span>
-                    <MyDatePicker Date={endDate} HandleSelect={_handleSelect} value={value} />
+                    <MyDatePicker Date={endDate} HandleSelect={_handleSelect} value={value}/>
                 </div>
                 <div className='flex-fill m-1' >
                     <span>HOTEL</span>
@@ -51,13 +52,3 @@ const AvailabilityCheck = props => {
 }
 
 export default AvailabilityCheck
-
-//  <Router>
-//             <Navbar />
-//             <Switch>
-//                 <Route path={`/${route.contant}`} component={ContactContainer} />
-//                 <Route path={`/${route.about}`} component={AboutContainer} />
-//                 <Route path={`/${route.burger}`} component={BurgerContainer} />
-//                 <Route path={`${route.home}`} component={HomeContainer} />
-//             </Switch>
-//         </Router>
