@@ -10,11 +10,10 @@ import StaffInfo from "../components/staffInfo";
 
 const Home = () => {
   return (
-    <div className="container-fluid">
-      <h1>Home</h1>
+    <div className="container-fluid">     
+      <CheckAvability />
       <AboutUs />
       <Carousel />
-      <CheckAvability />
       <Event />
       <OurRooms />
       <Services />

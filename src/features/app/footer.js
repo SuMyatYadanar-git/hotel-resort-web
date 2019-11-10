@@ -108,7 +108,10 @@ const Footer = props => {
             </div>
           </div>
         </div>
-        <div className="container border-top pt-3">
+        <div
+          className="container border-top pt-3"
+          style={{ color: Colors.textwhite, opacity: 0.5 }}
+        >
           <div className="d-flex flex-row flex-nowrap justify-content-between">
             <span>Copyright Ⓒ by KUMO Solutions</span>
             <span>
