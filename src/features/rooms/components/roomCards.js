@@ -56,7 +56,7 @@ const OurRooms = props => {
                 />
               </div>
               <div className="d-flex flex-column text-left">
-                <span className="py-2">{v.description}</span>
+                <span className="py-2">{v.desc}</span>
                 <table className="text-left my-2">
                   <tbody style={{ fontSize: fsc(media, 15) }}>
                     <tr style={{height:'2rem'}}>
@@ -125,7 +125,7 @@ const RoomInfo = [
     bed: 1,
     pricePerDay: 300,
     RoomImgUrl: "/images/rooms/DeluxeRoom/Deluxe1.jpg",
-    description:
+    desc:
       "Pellentesque posuere mauris ut interdum efficitur. Duis ac purus ante. Proin facilisis nec tortor consectetur vehicula."
   },
   {
@@ -136,7 +136,7 @@ const RoomInfo = [
     bed: 1,
     pricePerDay: 300,
     RoomImgUrl: "/images/rooms/FamilyRoom/familyRoom1.jpg",
-    description:
+    desc:
       "Pellentesque posuere mauris ut interdum efficitur. Duis ac purus ante. Proin facilisis nec tortor consectetur vehicula."
   },
   {
@@ -147,7 +147,7 @@ const RoomInfo = [
     bed: 1,
     pricePerDay: 300,
     RoomImgUrl: "/images/rooms/LuxuryRoom/luxuryRoom1.jpg",
-    description:
+    desc:
       "Pellentesque posuere mauris ut interdum efficitur. Duis ac purus ante. Proin facilisis nec tortor consectetur vehicula."
   },
   {
@@ -158,7 +158,7 @@ const RoomInfo = [
     bed: 1,
     pricePerDay: 300,
     RoomImgUrl: "/images/rooms/StandardRoom/standardRoom1.jpg",
-    description:
+    desc:
       "Pellentesque posuere mauris ut interdum efficitur. Duis ac purus ante. Proin facilisis nec tortor consectetur vehicula."
   },
   {
@@ -169,7 +169,7 @@ const RoomInfo = [
     bed: 1,
     pricePerDay: 300,
     RoomImgUrl: "/images/rooms/StandardRoom/standardRoom1.jpg",
-    description:
+    desc:
       "Pellentesque posuere mauris ut interdum efficitur. Duis ac purus ante. Proin facilisis nec tortor consectetur vehicula."
   },
   {
@@ -180,7 +180,7 @@ const RoomInfo = [
     bed: 1,
     pricePerDay: 300,
     RoomImgUrl: "/images/rooms/StandardRoom/standardRoom1.jpg",
-    description:
+    desc:
       "Pellentesque posuere mauris ut interdum efficitur. Duis ac purus ante. Proin facilisis nec tortor consectetur vehicula."
   }
 ];
