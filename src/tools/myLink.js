@@ -16,7 +16,7 @@ const MyLink = props => {
       id={`${id}`}
       className={className}
       style={{ ...defaultStyle, ...userStyle }}
-      to={to}
+      to={to===undefined?'#':to}
     >
       {text}
     </Link>

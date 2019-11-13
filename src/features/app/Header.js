@@ -1,7 +1,7 @@
 import React from "react";
 import { withMedia } from "react-media-query-hoc";
 
-import Navbar from "../app/navbar/navbar";
+import Navbar from "./navbar/navbar";
 
 const Header = props => {
   const { bgimg, title, media, text } = props;
@@ -25,7 +25,7 @@ const Header = props => {
       className="text-center text-light w-auto"
     >
       <Navbar {...props} />
-      <span className="text-uppercase "> {title}</span>
+      <span className="text-uppercase ">{title}</span>
       <p className="py-3 ">{text}</p>
     </div>
   );
