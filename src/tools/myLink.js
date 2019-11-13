@@ -1,17 +1,25 @@
 import React from "react";
-import {Link} from 'react-router-dom'
+import { Link } from "react-router-dom";
 
 import * as Colors from "../config/color.config";
 
-
 const MyLink = props => {
-  const { text,style } = props;
-  const defaultStyle = { textDecoration: "none", color: Colors.textwhite };
+  const { text, style, className, id, to } = props;
+  const defaultStyle = {
+    textDecoration: "none",
+    color: Colors.textwhite,
+    width: "100%"
+  };
   const userStyle = style === undefined ? {} : style;
   return (
     <Link
+      id={`${id}`}
+      className={className}
       style={{ ...defaultStyle, ...userStyle }}
-    >{text}</Link>
+      to={to}
+    >
+      {text}
+    </Link>
   );
 };
 

@@ -10,6 +10,7 @@ const MyButton = props => {
   const {
     text,
     height,
+    width,
     onClick,
     style,
     className,
@@ -21,7 +22,7 @@ const MyButton = props => {
   const defaultStyle = {
     background: isHover ? Colors.textwhite : Colors.textGold,
     height: `${height === undefined ? "100%" : height}`,
-    width: "100%",
+    width:  `${width === undefined ? "100%" : width}`,
     color: isHover ? Colors.textGold : Colors.textwhite,
     boxShadow: "none",
     fontSize: `${undefined?'14px':fontSize}`,

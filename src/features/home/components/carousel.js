@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Carousel = ()=>{
-    return(
-<div>
-    Carousel
+const Carousel = () => {
+    return (
+        <div>
+            Carousel
 </div>
     )
 }

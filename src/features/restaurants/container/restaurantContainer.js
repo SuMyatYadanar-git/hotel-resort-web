@@ -4,12 +4,13 @@ import Breakfast from '../components/breakfast'
 import Dinner from '../components/dinner'
 import Lunch from '../components/lunch'
 import Drink from '../components/drink'
+import RestaurantHeader from '../components/restaurantHeader'
 
 
 const Restaurant = () => {
     return (
-        <div className='container-fluid'>
-            <h1>Restaurant</h1>
+        <div className='container-fluid p-0'>
+            <RestaurantHeader/>
             <Breakfast />
             <Dinner />
             <Lunch />

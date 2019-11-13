@@ -41,7 +41,7 @@ const OurRooms = props => {
         {RoomInfo.map((v, k) => (
           <div className="col-lg-6 p-4" key={k}>
             <div
-              className="d-flex flex-column bg-light"
+              className="d-flex flex-column"
               style={{ transition: "1s" }}
             >
               <div className="w-100" style={{ overflow: "hidden" }}>
@@ -61,21 +61,21 @@ const OurRooms = props => {
                   <tbody style={{ fontSize: fsc(media, 15) }}>
                     <tr style={{height:'2rem'}}>
                       <td style={{ fontSize: fsc(media, 10) }}>
-                        <i class="fa fa-square"></i>
+                        <i className="fa fa-square"></i>
                       </td>
                       <td>Max : {v.max} Person(s)</td>
                       <td style={{ fontSize: fsc(media, 10) }}>
-                        <i class="fa fa-square"></i>
+                        <i className="fa fa-square"></i>
                       </td>
                       <td>View : {v.view}</td>
                     </tr>
                     <tr>
                       <td style={{ fontSize: fsc(media, 10) }}>
-                        <i class="fa fa-square"></i>
+                        <i className="fa fa-square"></i>
                       </td>
                       <td>Size : {v.size} Person(s)</td>
                       <td style={{ fontSize: fsc(media, 10) }}>
-                        <i class="fa fa-square"></i>
+                        <i className="fa fa-square"></i>
                       </td>
                       <td>Bed : {v.bed}</td>
                     </tr>

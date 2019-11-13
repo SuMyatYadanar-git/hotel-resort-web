@@ -58,26 +58,26 @@ const Footer = props => {
             <div className="col-lg-3 col-md-3 col-sm-12">
               <img src={Logo} className="w-100" />
             </div>
-            <div className="col-lg-3 col-md-3 col-sm-4">
+            <div className="col-lg-3 col-md-3 col-sm-4 px-2">
               <ul style={{ listStyle: "none", lineHeight: 2 }}>
                 <li>
-                  <MyLink text={"FAQS"} />
+                  <MyLink to={'#'} text={"FAQS"} />
                 </li>
                 <li>
-                  <MyLink text={"News"} />
+                  <MyLink to={'#'} text={"News"} />
                 </li>
                 <li>
-                  <MyLink text={"Photo and Video"} />
+                  <MyLink to={'#'} text={"Photo and Video"} />
                 </li>
                 <li>
-                  <MyLink text={"Restaurant"} />
+                  <MyLink to={'#'} text={"Restaurant"} />
                 </li>
                 <li>
-                  <MyLink text={"Gift Card"} />
+                  <MyLink to={'#'} text={"Gift Card"} />
                 </li>
               </ul>
             </div>
-            <div className="col-lg-3 col-md-3 col-sm-4">
+            <div className="col-lg-3 col-md-3 col-sm-4 px-2">
               <ul style={{ listStyle: "none", lineHeight: 2 }}>
                 <li>
                   <MyLink text={"Our Location"} />
@@ -93,7 +93,7 @@ const Footer = props => {
                 </li>
               </ul>
             </div>
-            <div className="col-lg-3 col-md-3 col-sm-4">
+            <div className="col-lg-3 col-md-3 col-sm-4 px-2">
               <ul style={{ listStyle: "none", lineHeight: 2 }}>
                 <li>
                   <MyLink text={"About"} />

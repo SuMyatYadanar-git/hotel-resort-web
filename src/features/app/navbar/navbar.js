@@ -1,18 +1,23 @@
-import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
 import { withMedia } from "react-media-query-hoc";
 
 import Logo from "../../../assets/icons/logo.png";
 import * as RoutePath from "../../../config/route.config";
 import { fsc } from "../../../helper/fontControlHelper";
+import MyLink from "../../../tools/myLink";
+import * as Colors from "../../../config/color.config";
 
 const Navbar = props => {
   const { media } = props;
 
+  const [MenuClick, setMenuClick] = useState(false);
+  const handleMenuClick = () => {
+    setMenuClick(!MenuClick);
+  };
   useEffect(() => {
     window.onscroll = () => {
       const MyNav = document.getElementById("NavbarContainer");
-      const NavTitle = document.getElementById("NavTitle");
+
       if (
         document.body.scrollTop > 40 ||
         document.documentElement.scrollTop > 40
@@ -24,12 +29,11 @@ const Navbar = props => {
         MyNav.style.background = "none";
         MyNav.style.position = "relative";
       }
-      console.log();
     };
   });
 
   return (
-    <div className="container-0">
+    <div>
       {document.body.scrollTop === 0 ? (
         <div
           className="d-flex flex-row flex-wrap justify-content-between px-4 border-bottom py-2"
@@ -43,65 +47,93 @@ const Navbar = props => {
             </span>
 
             <i className="fa fa-phone px-2" />
-            <span>225 Beach Street, Australian</span>
+            <span>225 Beach Street</span>
           </span>
 
-          {media.mobile||
+          {media.mobile || (
             <span>
-              <a href="www.facebook.com">
+              <a href="http://www.facebook.com" className="text-light">
                 <i className="fa fa-facebook pr-3" />
               </a>
-              <a href="#">
+              <a href="http://www.twitter.com" className="text-light">
                 <i className="fa fa-twitter pr-3" />
               </a>
-              <a href="#">
+              <a href="http://www.youtube.com" className="text-light">
                 <i className="fa fa-instagram pr-3" />
               </a>
-              <a href="#">
+              <a href="http://www.youtube.com" className="text-light">
                 <i className="fa fa-youtube pr-3" />
               </a>
             </span>
-          }
+          )}
         </div>
       ) : null}
       <div
         id="NavbarContainer"
-        className="d-flex flex-row w-100 justify-content-between text-dark py-2 px-4"
-        style={{ background: "none", zIndex: 2, opacity: 0.9,transition:'.4s' }}
+        className="d-flex flex-row w-100 justify-content-between py-2 px-4"
+        style={{
+          background: "none",
+          zIndex: 2,
+          opacity: 0.9,
+          transition: ".4s"
+        }}
       >
-        <div style={{ width: 80, height: 60 }}>
-          <img src={Logo} alt="Logo" className="w-100 h-100" />
+        <div style={{ width: 80}}>
+          <img src={Logo} alt="Logo" className="w-100" />
         </div>
-        {media.mobile ? (
-          <span style={{ fontSize: 25 }}>
-            <i className="fa fa-list" />
+        {media.mobile&&MenuClick===false ? (
+          <span
+            style={{ fontSize: 25, color: Colors.textwhite }}
+            onClick={handleMenuClick}
+          >
+            <i className="fa fa-list pt-3" />
           </span>
+        ) : media.mobile&&MenuClick === true ? (
+          null
         ) : (
           <div className="nav nav-link" style={{ fontSize: fsc(media, 20) }}>
-            <Link
-              className="text-decoration-none text-dark pr-4"
+            <MyLink
+              className="text-decoration-none pr-4"
+              id={"MenuLink"}
               to={`/${RoutePath.Home}`}
-            >
-              HOME
-            </Link>
-            <Link
-              className="text-decoration-none text-dark pr-4"
+              text={"HOME"}
+            />
+            <MyLink
+              className="text-decoration-none pr-4"
+              id={"MenuLink1"}
               to={`/${RoutePath.Room}`}
-            >
-              ROOM
-            </Link>
-            <Link
-              className="text-decoration-none text-dark pr-4"
+              text={"ROOM"}
+            />
+            <MyLink
+              className="text-decoration-none pr-4"
+              id={"MenuLink2"}
               to={`/${RoutePath.Restaurant}`}
-            >
-              RESTAURANT
-            </Link>
-            <Link
-              className="text-decoration-none text-dark pr-4"
+              text={"RESTAURANT"}
+            />
+            <MyLink
+              className="text-decoration-none pr-4"
+              id={"MenuLink3"}
               to={`/${RoutePath.Contact}`}
-            >
-              CONTACT
-            </Link>
+              text={"CONTACT"}
+            />
+          </div>
+        )}
+        {MenuClick && (
+          <div className="container-fluid">
+            <ul style={{ textAlign: "left", listStyle: "none" }}>
+              <li className="nav-item py-2 border-bottom">
+                <MyLink text={"HOME"} to={`/${RoutePath.Home}`} />
+              </li>
+              <li className="nav-item py-2 border-bottom">
+                <MyLink text={"ROOM"} to={`/${RoutePath.Room}`} />
+              </li>
+              <li className="nav-item py-2 border-bottom">
+                <MyLink text={"RESTAURANT"} to={`/${RoutePath.Restaurant}`} />
+              </li>
+              <li className="nav-item pt-2">
+                <MyLink text={"CONTACT"} to={`/${RoutePath.Contact}`} />
+              </li>
+            </ul>
           </div>
         )}
       </div>
