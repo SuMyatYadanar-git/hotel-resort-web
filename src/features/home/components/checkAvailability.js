@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import {Link} from 'react-router-dom'
 import originalMoment from 'moment'
 import { extendMoment } from 'moment-range'
 
@@ -6,6 +7,7 @@ import MyDatePicker from '../../../tools/myDatePicker'
 import MyDropDown from '../../../tools/myDropDown'
 import MyButton from '../../../tools/myButton'
 import * as Colors from '../../../config/color.config'
+import * as RoutePath from '../../../config/route.config'
 
 const AvailabilityCheck = props => {
     const moment = extendMoment(originalMoment)
@@ -42,7 +44,7 @@ const AvailabilityCheck = props => {
                     <div style={{ height: 60, lineHeight:4.2 }}><MyDropDown /></div>
                 </div>
                 <div className='flex-fill m-1 align-self-end' >
-                    <MyButton style={{ height: 60 }} text={'Check Availability'} />
+                  <Link to={`/${RoutePath.checkavailability}`} ><MyButton style={{ height: 60 }} text={'Check Availability'} /></Link>
                 </div>
             </div>
 

@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { withMedia } from "react-media-query-hoc";
+import { Link } from 'react-router-dom'
 
+import * as RoutePath from  '../../../config/route.config'
 import * as Colors from "../../../config/color.config";
 import Line from "../../../assets/image/line.png";
 import * as Font from "../../../config/font.config";
@@ -59,7 +61,7 @@ const OurRooms = props => {
                 <span className="py-2">{v.desc}</span>
                 <table className="text-left my-2">
                   <tbody style={{ fontSize: fsc(media, 15) }}>
-                    <tr style={{height:'2rem'}}>
+                    <tr style={{ height: '2rem' }}>
                       <td style={{ fontSize: fsc(media, 10) }}>
                         <i className="fa fa-square"></i>
                       </td>
@@ -94,15 +96,18 @@ const OurRooms = props => {
                     >
                       {v.pricePerDay}
                     </span>
-                   /days
+                    /days
                   </div>
-                  <div className="d-flex">
-                    <MyButton
-                      height={"50px"}
-                      text={"View Detail"}
-                      style={{ width: "120px" }}
-                      bold
-                    />
+                  <div className="d-flex border border-danger">
+                    <Link to={`/${RoutePath.viewdetail}`} >
+                      <MyButton
+                        height={"50px"}
+                        text={"View Detail"}
+                        style={{ width: "120px" }}
+                        bold
+                      />
+
+                    </Link>
                   </div>
                 </div>
               </div>
