@@ -5,7 +5,7 @@ import bg1 from "../../../assets/image/headers/rooms/1.jpg";
 import bg2 from "../../../assets/image/headers/restaurant/1.jpg";
 import bg3 from "../../../assets/image/headers/contact/1.jpg";
 import "./carousel.css";
-import withMedia from "react-media-query-hoc/dist/with-media";
+import {withMedia} from "react-media-query-hoc";
 
 const Carousel = props => {
   const { media } = props;

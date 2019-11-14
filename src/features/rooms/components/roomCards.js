@@ -1,17 +1,20 @@
 import React, { useState } from "react";
 import { withMedia } from "react-media-query-hoc";
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 
-import * as RoutePath from  '../../../config/route.config'
+import * as RoutePath from "../../../config/route.config";
 import * as Colors from "../../../config/color.config";
 import Line from "../../../assets/image/line.png";
 import * as Font from "../../../config/font.config";
 import MyButton from "../../../tools/myButton";
 import { fsc } from "../../../helper/fontControlHelper";
 
-const OurRooms = props => {
+const RoomCards = props => {
   const { media } = props;
   const [hover, setHover] = useState(false);
+
+  localStorage.setItem('RoomData',JSON.stringify(RoomInfo))
+
   const _handleHover = e => {
     setHover(!hover);
     if (hover === true) {
@@ -23,7 +26,13 @@ const OurRooms = props => {
   return (
     <div className="container text-center">
       <div className="d-flex flex-column align-items-center">
-        <span style={{ fontSize: fsc(media, 35), fontFamily: Font.bodyTitle ,fontWeight:'bold'}}>
+        <span
+          style={{
+            fontSize: fsc(media, 35),
+            fontFamily: Font.bodyTitle,
+            fontWeight: "bold"
+          }}
+        >
           Our Rooms
         </span>
         <img
@@ -42,10 +51,7 @@ const OurRooms = props => {
       <div className="d-flex flex-row flex-wrap">
         {RoomInfo.map((v, k) => (
           <div className="col-lg-6 p-4" key={k}>
-            <div
-              className="d-flex flex-column"
-              style={{ transition: "1s" }}
-            >
+            <div className="d-flex flex-column" style={{ transition: "1s" }}>
               <div className="w-100" style={{ overflow: "hidden" }}>
                 <img
                   src={process.env.PUBLIC_URL + `${v.RoomImgUrl}`}
@@ -61,7 +67,7 @@ const OurRooms = props => {
                 <span className="py-2">{v.desc}</span>
                 <table className="text-left my-2">
                   <tbody style={{ fontSize: fsc(media, 15) }}>
-                    <tr style={{ height: '2rem' }}>
+                    <tr style={{ height: "2rem" }}>
                       <td style={{ fontSize: fsc(media, 10) }}>
                         <i className="fa fa-square"></i>
                       </td>
@@ -90,7 +96,7 @@ const OurRooms = props => {
                       style={{
                         fontWeight: "bold",
                         fontSize: 25,
-                        marginTop: '-9px'
+                        marginTop: "-9px"
                       }}
                       className="px-1"
                     >
@@ -98,15 +104,14 @@ const OurRooms = props => {
                     </span>
                     /days
                   </div>
-                  <div className="d-flex border border-danger">
-                    <Link to={`/${RoutePath.viewdetail}`} >
+                  <div className="d-flex">
+                    <Link to={`/${RoutePath.viewdetail}`}>
                       <MyButton
                         height={"50px"}
                         text={"View Detail"}
                         style={{ width: "120px" }}
                         bold
                       />
-
                     </Link>
                   </div>
                 </div>
@@ -119,7 +124,7 @@ const OurRooms = props => {
   );
 };
 
-export default withMedia(OurRooms);
+export default withMedia(RoomCards);
 
 const RoomInfo = [
   {
@@ -131,7 +136,8 @@ const RoomInfo = [
     pricePerDay: 300,
     RoomImgUrl: "/images/rooms/DeluxeRoom/Deluxe1.jpg",
     desc:
-      "Pellentesque posuere mauris ut interdum efficitur. Duis ac purus ante. Proin facilisis nec tortor consectetur vehicula."
+      "Pellentesque posuere mauris ut interdum efficitur. Duis ac purus ante. Proin facilisis nec tortor consectetur vehicula.",
+    isAvailable: true
   },
   {
     id: 2,
@@ -142,7 +148,8 @@ const RoomInfo = [
     pricePerDay: 300,
     RoomImgUrl: "/images/rooms/FamilyRoom/familyRoom1.jpg",
     desc:
-      "Pellentesque posuere mauris ut interdum efficitur. Duis ac purus ante. Proin facilisis nec tortor consectetur vehicula."
+      "Pellentesque posuere mauris ut interdum efficitur. Duis ac purus ante. Proin facilisis nec tortor consectetur vehicula.",
+    isAvailable: false
   },
   {
     id: 3,
@@ -153,7 +160,8 @@ const RoomInfo = [
     pricePerDay: 300,
     RoomImgUrl: "/images/rooms/LuxuryRoom/luxuryRoom1.jpg",
     desc:
-      "Pellentesque posuere mauris ut interdum efficitur. Duis ac purus ante. Proin facilisis nec tortor consectetur vehicula."
+      "Pellentesque posuere mauris ut interdum efficitur. Duis ac purus ante. Proin facilisis nec tortor consectetur vehicula.",
+    isAvailable: false
   },
   {
     id: 4,
@@ -164,7 +172,8 @@ const RoomInfo = [
     pricePerDay: 300,
     RoomImgUrl: "/images/rooms/StandardRoom/standardRoom1.jpg",
     desc:
-      "Pellentesque posuere mauris ut interdum efficitur. Duis ac purus ante. Proin facilisis nec tortor consectetur vehicula."
+      "Pellentesque posuere mauris ut interdum efficitur. Duis ac purus ante. Proin facilisis nec tortor consectetur vehicula.",
+    isAvailable: false
   },
   {
     id: 5,
@@ -175,7 +184,8 @@ const RoomInfo = [
     pricePerDay: 300,
     RoomImgUrl: "/images/rooms/StandardRoom/standardRoom1.jpg",
     desc:
-      "Pellentesque posuere mauris ut interdum efficitur. Duis ac purus ante. Proin facilisis nec tortor consectetur vehicula."
+      "Pellentesque posuere mauris ut interdum efficitur. Duis ac purus ante. Proin facilisis nec tortor consectetur vehicula.",
+    isAvailable: true
   },
   {
     id: 6,
@@ -186,6 +196,7 @@ const RoomInfo = [
     pricePerDay: 300,
     RoomImgUrl: "/images/rooms/StandardRoom/standardRoom1.jpg",
     desc:
-      "Pellentesque posuere mauris ut interdum efficitur. Duis ac purus ante. Proin facilisis nec tortor consectetur vehicula."
+      "Pellentesque posuere mauris ut interdum efficitur. Duis ac purus ante. Proin facilisis nec tortor consectetur vehicula.",
+    isAvailable: true
   }
 ];

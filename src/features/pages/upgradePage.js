@@ -1,18 +1,8 @@
 import React from 'react'
-import { withMedia } from 'react-media-query-hoc'
-import Countdown from 'react-countdown-now';
-
-import bg1 from '../../assets/image/pageImg/backgound1.jpg'
-import bg2 from '../../assets/image/pageImg/bg2.jpg'
-import bg3 from '../../assets/image/pageImg/bg3.jpg'
 
 import '../../App.css'
 
-
 const UpgradePage = props => {
-
-    const { media } = props
-
     //     const bgStyle = {
     //         paddingTop: '100rem',
     //         paddingBottom:'20rem',
@@ -38,12 +28,12 @@ const UpgradePage = props => {
         <div className="container-fluid p-0">
             <div className="bg-dim full-bg-size ">
 
-                <div className="d-flex flex-column align-items-center text-light " style={{ position: 'absolute', top: '30%', width: '98%', paddingLeft: '2%' }}>
-                    <div className="py-3"><h1>COMMING SOON </h1> </div>
-                    <div className="py-3"><h4> WE ARE WORKING HARDER! </h4></div>
-                    <div className="py-3">The website will be open</div>
+                <div className="d-flex flex-column align-items-center text-light " style={{ position: 'absolute', top: '28%', width: '98%', paddingLeft: '2%' }}>
+                    <div className="py-0"><h1>COMING SOON </h1> </div>
+                    <div className="py-2"><h5> WE ARE WORKING HARDER! </h5></div>
+                    <div className="py-2 pb-4"><h6> The website will be open</h6></div>
 
-                    <div className="d-flex justify-content-around bg-transparent border border-light col-lg-8 col-12 p-0  py-3 " >
+                    <div className="d-flex justify-content-around bg-transparent border border-light col-lg-6 col-12 p-0 py-3" >
 
                         <div className="d-flex flex-column align-items-center px-3 py-2 " >
                             <span>00</span>
@@ -72,5 +62,5 @@ const UpgradePage = props => {
         </div>
     )
 };
-export default withMedia(UpgradePage)
+export default UpgradePage;
 

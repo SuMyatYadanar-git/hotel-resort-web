@@ -9,6 +9,7 @@ import { fsc } from "../../../helper/fontControlHelper";
 const RestaurantGallery = props => {
   const { media, Data, Type, Time } = props;
   const [hover, setHover] = useState(false);
+
   const _handleHover = e => {
     setHover(!hover);
     if (hover === true) {
