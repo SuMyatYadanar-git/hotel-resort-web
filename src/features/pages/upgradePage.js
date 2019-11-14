@@ -1,8 +1,4 @@
 import React from 'react'
-import Countdown from 'react-countdown-now';
-import bg1 from '../../assets/image/pageImg/backgound1.jpg'
-import bg2 from '../../assets/image/pageImg/bg2.jpg'
-import bg3 from '../../assets/image/pageImg/bg3.jpg'
 
 const UpgradePage = props => {
     return (

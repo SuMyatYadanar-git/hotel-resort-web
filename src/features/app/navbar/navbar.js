@@ -20,10 +20,9 @@ const Navbar = props => {
     }
     window.onscroll = () => {
       const MyNav = document.getElementById("NavbarContainer");
-
       if (
-        document.body.scrollTop > 40 ||
-        document.documentElement.scrollTop > 40
+        document.body.scrollTop > 30 ||
+        document.documentElement.scrollTop > 30
       ) {
         MyNav.style.background = "black";
         MyNav.style.position = "fixed";
@@ -37,10 +36,14 @@ const Navbar = props => {
 
   return (
     <div className="sticky-top position-fixed w-100">
-      {document.body.scrollTop === 0 ? (
+      {window.pageYOffset > 0 ? null : (
         <div
           className="d-flex flex-row flex-wrap justify-content-between px-3 border-bottom py-2 text-light"
-          style={{ fontSize: fsc(media, 13), borderBottom: "1px solid light", background:'rgba(255, 255, 255, 0.2)'}}
+          style={{
+            fontSize: fsc(media, 13),
+            borderBottom: "1px solid light",
+            background: "rgba(255, 255, 255, 0.2)"
+          }}
           id="NavTitle"
         >
           <span className="flex-column">
@@ -70,24 +73,22 @@ const Navbar = props => {
             </span>
           )}
         </div>
-      ) : null}
+      )}
       <div
         id="NavbarContainer"
         className="d-flex flex-row w-100 justify-content-between py-2 px-3"
-        style={{          
-          zIndex: 2,          
+        style={{
+          zIndex: 2,
           opacity: MenuClick ? 1 : 0.9,
-          transition: ".4s"
+          transition: "1s"
         }}
       >
         <div style={{ width: 80 }}>
           <img src={Logo} alt="Logo" className="w-100" />
         </div>
         {media.mobile && MenuClick === false ? (
-          <span
-            style={{ fontSize: 25, color: Colors.textwhite }}            
-          >
-            <i className="fa fa-list pt-3" onClick={handleMenuClick}/>
+          <span style={{ fontSize: 25, color: Colors.textwhite }}>
+            <i className="fa fa-list pt-3" onClick={handleMenuClick} />
           </span>
         ) : media.mobile && MenuClick === true ? null : (
           <div className="my-auto" style={{ fontSize: fsc(media, 15) }}>

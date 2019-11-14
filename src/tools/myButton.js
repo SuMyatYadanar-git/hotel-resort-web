@@ -25,10 +25,10 @@ const MyButton = props => {
     width:  `${width === undefined ? "100%" : width}`,
     color: isHover ? Colors.textGold : Colors.textwhite,
     boxShadow: "none",
+    outline:'none',
     fontSize: `${undefined?'14px':fontSize}`,
     type: `${type === undefined ? "submit" : `${type}`}`,
     border: `2px solid ${Colors.textGold}`,
-    outline: "none",
     fontWeight: `${bold === undefined ? "normal" : "bold"}`,
     padding: 10
   };
