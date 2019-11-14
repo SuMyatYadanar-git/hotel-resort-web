@@ -37,7 +37,7 @@ const RestaurantGallery = props => {
         {Data.map((v, k) => (
           <div className="col-lg-6 p-3" key={k}>
             <div
-              className="d-flex flex-row bg-light"
+              className="d-flex flex-row"
               style={{ transition: "1s" }}
             >
               <div className="w-100" style={{ overflow: "hidden" }}>

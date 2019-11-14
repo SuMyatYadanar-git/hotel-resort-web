@@ -1,7 +1,7 @@
 import React from "react";
 
 import MyLink from "../../tools/myLink";
-import Logo from "../../assets/icons/logo.png";
+import Logo from "../../assets/icons/Goldlogo.png";
 import MyInput from "../../tools/myInput";
 import * as Colors from "../../config/color.config";
 import { withMedia } from "react-media-query-hoc";
@@ -54,30 +54,30 @@ const Footer = props => {
       </div>
       <div className="text-light py-4" style={{ background: Colors.Footerbg }}>
         <div className="container py-4">
-          <div className="row">
-            <div className="col-lg-3 col-md-3 col-sm-12">
-              <img src={Logo} className="w-100" />
+          <div className="row text-center">
+            <div className="col-lg-3 col-md-3 col-12 pb-4">
+              <img src={Logo} className="w-75" />
             </div>
-            <div className="col-lg-3 col-md-3 col-sm-4 px-2">
+            <div className="col-lg-3 col-md-3 col-4 px-2 text-left">
               <ul style={{ listStyle: "none", lineHeight: 2 }}>
                 <li>
-                  <MyLink to={'#'} text={"FAQS"} />
+                  <MyLink to={"#"} text={"FAQS"} />
                 </li>
                 <li>
-                  <MyLink to={'#'} text={"News"} />
+                  <MyLink to={"#"} text={"News"} />
                 </li>
                 <li>
-                  <MyLink to={'#'} text={"Photo and Video"} />
+                  <MyLink to={"#"} text={"Photo and Video"} />
                 </li>
                 <li>
-                  <MyLink to={'#'} text={"Restaurant"} />
+                  <MyLink to={"#"} text={"Restaurant"} />
                 </li>
                 <li>
-                  <MyLink to={'#'} text={"Gift Card"} />
+                  <MyLink to={"#"} text={"Gift Card"} />
                 </li>
               </ul>
             </div>
-            <div className="col-lg-3 col-md-3 col-sm-4 px-2">
+            <div className="col-lg-3 col-md-3 col-4 px-2 text-left">
               <ul style={{ listStyle: "none", lineHeight: 2 }}>
                 <li>
                   <MyLink text={"Our Location"} />
@@ -93,7 +93,7 @@ const Footer = props => {
                 </li>
               </ul>
             </div>
-            <div className="col-lg-3 col-md-3 col-sm-4 px-2">
+            <div className="col-lg-3 col-md-3 col-4 px-2 text-left">
               <ul style={{ listStyle: "none", lineHeight: 2 }}>
                 <li>
                   <MyLink text={"About"} />

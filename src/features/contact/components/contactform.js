@@ -25,7 +25,7 @@ const ContactForm = props => {
                     <MyInput className='' id={'subject'} placeHolder={'Subject'} style={{ fontColor: '#5A6367' }} />
                 </div>
                 <div className='p-1 flex-fill py-2'>
-                    <textarea id='message' placeholder='Your Message' style={{ fontSize: 12, fontColor: '#5A6367', maxHeight: '8rem', width: '100%', padding: 20 }} onFocus={(e) => document.getElementById('message').style.border = `2px solid ${Colors.textGold}`} />
+                    <textarea id='message' placeholder='Your Message' style={{ fontSize: 12, fontColor: '#5A6367', maxHeight: '8rem', width: '100%', padding: 20 ,border:`1px solid ${Colors.navbg}`}} onFocus={(e) => document.getElementById('message').style.border = `2px solid ${Colors.textGold}`} />
                 </div>
 
                 <div className=' p-1 py-2'>

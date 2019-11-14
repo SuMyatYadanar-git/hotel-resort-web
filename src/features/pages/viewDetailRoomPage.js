@@ -1,10 +1,14 @@
-import React from 'react'
+import React from "react";
 
-const ViewDetailRoomPage = props =>{
-    return(
-        <div>
-            view detail room page
-        </div>
-    )
-}
-export default ViewDetailRoomPage
+import bg1 from "../../assets/image/headers/contact/1.jpg";
+import Header from "../app/Header";
+
+const ViewDetailRoomPage = props => {
+  return (
+    <div>
+      <Header bgimg={bg1} />
+      view detail room page
+    </div>
+  );
+};
+export default ViewDetailRoomPage;

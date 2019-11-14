@@ -2,12 +2,16 @@ import React from 'react'
 import { withMedia } from 'react-media-query-hoc'
 
 import { fsc } from '../../../helper/fontControlHelper'
+import * as Font from '../../../config/font.config'
 
 const ContactInfo = props => {
     const { media } = props
     return (
         <div className='py-2'>
-            <div style={{ fontSize: fsc(media, 35) }} className="py-2 font-weight-bold"> CONTACT</div>
+            <div style={{
+            fontSize: fsc(media, 35),
+            fontFamily: Font.bodyTitle,
+            fontWeight: "bold"}}> CONTACT</div>
             <div className='py-2 text-justify'>
                 <p style={{ lineHeight: '25px', }}>
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.

@@ -23,7 +23,7 @@ const OurRooms = props => {
   return (
     <div className="container text-center">
       <div className="d-flex flex-column align-items-center">
-        <span style={{ fontSize: fsc(media, 35), fontFamily: Font.bodyTitle }}>
+        <span style={{ fontSize: fsc(media, 35), fontFamily: Font.bodyTitle ,fontWeight:'bold'}}>
           Our Rooms
         </span>
         <img

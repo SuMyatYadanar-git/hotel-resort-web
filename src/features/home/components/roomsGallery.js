@@ -18,7 +18,7 @@ const OurRooms = () => {
     return (
         <div className='pt-2 text-center'>
             <div className='d-flex flex-column align-items-center'>
-                <span style={{ fontSize: 35, fontFamily: Font.bodyTitle }}>Our Rooms</span>
+                <span style={{ fontSize: 35, fontFamily: Font.bodyTitle,fontWeight:'bold' }}>Our Rooms</span>
                 <img className='py-2' src={Line} alt='line' style={{ width: '250px' }} />
                 {/* file seprate */}
                 <p style={{ color: Colors.bodyText }}>When you host a party or family reunion, the special celebrations let you streng then bonds with</p>

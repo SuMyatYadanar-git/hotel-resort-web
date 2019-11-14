@@ -2,12 +2,14 @@ import React from "react";
 
 import RestaurantHeader from "../components/restaurantHeader";
 import RestaurantGallery from "../components/restaurantGallery";
+import Footer from '../../app/footer'
+
 
 const Restaurant = props => {
   return (
     <div className="container-fluid p-0">
       <RestaurantHeader />
-      <div className="pt-5">
+      <div>
         <RestaurantGallery
           Data={BreakfastData}
           Type={"Breakfast"}
@@ -29,6 +31,7 @@ const Restaurant = props => {
           Time={"11:00 Am - 11:00 Pm"}
         />
       </div>
+      <Footer/>
     </div>
   );
 };
