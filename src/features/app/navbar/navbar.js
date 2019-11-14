@@ -11,12 +11,13 @@ const Navbar = props => {
   const { media } = props;
 
   const [MenuClick, setMenuClick] = useState(false);
-  const handleMenuClick = () => {    
+  const handleMenuClick = () => {
     setMenuClick(!MenuClick);
   };
   useEffect(() => {
-    if(media.desktop||media.tablet)
-    {setMenuClick(false)}
+    if (media.desktop || media.tablet) {
+      setMenuClick(false);
+    }
     window.onscroll = () => {
       const MyNav = document.getElementById("NavbarContainer");
 
@@ -38,8 +39,8 @@ const Navbar = props => {
     <div className="sticky-top position-fixed w-100">
       {document.body.scrollTop === 0 ? (
         <div
-          className="d-flex flex-row flex-wrap justify-content-between px-4 border-bottom py-2  text-light"
-          style={{ fontSize: fsc(media, 13) ,borderBottom:'1px solid light'}}
+          className="d-flex flex-row flex-wrap justify-content-between px-3 border-bottom py-2 text-light"
+          style={{ fontSize: fsc(media, 13), borderBottom: "1px solid light", background:'rgba(255, 255, 255, 0.2)'}}
           id="NavTitle"
         >
           <span className="flex-column">
@@ -72,11 +73,10 @@ const Navbar = props => {
       ) : null}
       <div
         id="NavbarContainer"
-        className="d-flex flex-row w-100 justify-content-between py-2 px-4 "
-        style={{
-          background: "none",
-          zIndex: 2,
-          opacity: MenuClick?1: 0.9,
+        className="d-flex flex-row w-100 justify-content-between py-2 px-3"
+        style={{          
+          zIndex: 2,          
+          opacity: MenuClick ? 1 : 0.9,
           transition: ".4s"
         }}
       >
@@ -85,33 +85,32 @@ const Navbar = props => {
         </div>
         {media.mobile && MenuClick === false ? (
           <span
-            style={{ fontSize: 25, color: Colors.textwhite }}
-            onClick={handleMenuClick}
+            style={{ fontSize: 25, color: Colors.textwhite }}            
           >
-            <i className="fa fa-list pt-3" />
+            <i className="fa fa-list pt-3" onClick={handleMenuClick}/>
           </span>
         ) : media.mobile && MenuClick === true ? null : (
-          <div className="nav nav-link" style={{ fontSize: fsc(media, 20) }}>
+          <div className="my-auto" style={{ fontSize: fsc(media, 15) }}>
             <MyLink
-              className="text-decoration-none pr-4"
+              className="pr-4"
               id={"MenuLink"}
               to={`/${RoutePath.Home}`}
               text={"HOME"}
             />
             <MyLink
-              className="text-decoration-none pr-4"
+              className="pr-4"
               id={"MenuLink1"}
               to={`/${RoutePath.Room}`}
               text={"ROOM"}
             />
             <MyLink
-              className="text-decoration-none pr-4"
+              className="pr-4"
               id={"MenuLink2"}
               to={`/${RoutePath.Restaurant}`}
               text={"RESTAURANT"}
             />
             <MyLink
-              className="text-decoration-none pr-4"
+              className="pr-4"
               id={"MenuLink3"}
               to={`/${RoutePath.Contact}`}
               text={"CONTACT"}
@@ -119,7 +118,10 @@ const Navbar = props => {
           </div>
         )}
         {MenuClick && (
-          <div className="container-fluid bg-dark text-light w-75" style={{borderRadius:5}}>
+          <div
+            className="container-fluid bg-dark text-light w-75"
+            style={{ borderRadius: 5 }}
+          >
             <ul style={{ listStyle: "none" }} className="pl-2 text-left">
               <div className="w-100 text-right">
                 <i

@@ -4,6 +4,7 @@ import ContactForm from "../components/contactform";
 import ContactInfo from "../components/contactInfo";
 import ContactMap from "../components/contactMap";
 import ContactHeader from "../components/contactHeader";
+import Footer from '../../app/footer'
 
 const Contact = () => {
   return (
@@ -19,8 +20,10 @@ const Contact = () => {
         </div>
     </div>
       </div>
-     
+     <div style={{height:'450px',position:'relative'}}>
         <ContactMap/>
+     </div>
+     <Footer/>
     </div>
   );
 };
