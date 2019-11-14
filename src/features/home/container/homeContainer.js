@@ -1,4 +1,5 @@
 import React from "react";
+import { withMedia } from 'react-media-query-hoc'
 
 import AboutUs from "../components/aboutUs";
 import Carousel from "../components/carousel";
@@ -10,15 +11,15 @@ import StaffInfo from "../components/staffInfo";
 import HomeCarousel from "../components/carousel";
 import Navbar from "../../app/navbar/navbar";
 
-const Home = () => {
+const Home = props => {
+  const { media } = props
   return (
-    <div className="container-fluid p-0">  
-    <div>
-   
-    <Navbar /> 
-    <HomeCarousel/>  
-    </div>
-   
+    <div className="container-fluid p-0">
+      <div >
+        <HomeCarousel media={media} />
+        <Navbar />
+      </div>
+
       <CheckAvability />
       <AboutUs />
       {/* <Carousel /> */}
@@ -30,4 +31,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default withMedia(Home);

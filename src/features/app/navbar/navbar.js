@@ -33,11 +33,11 @@ const Navbar = props => {
   });
 
   return (
-    <div>
+    <div className="sticky-top position-fixed w-100">
       {document.body.scrollTop === 0 ? (
         <div
-          className="d-flex flex-row flex-wrap justify-content-between px-4 border-bottom py-2"
-          style={{ fontSize: fsc(media, 13) }}
+          className="d-flex flex-row flex-wrap justify-content-between px-4 border-bottom py-2  mx-4 text-light"
+          style={{ fontSize: fsc(media, 13) ,borderBottom:'1px solid light'}}
           id="NavTitle"
         >
           <span className="flex-column">
@@ -70,7 +70,7 @@ const Navbar = props => {
       ) : null}
       <div
         id="NavbarContainer"
-        className="d-flex flex-row w-100 justify-content-between py-2 px-4"
+        className="d-flex flex-row w-100 justify-content-between py-2 px-4 "
         style={{
           background: "none",
           zIndex: 2,
@@ -119,7 +119,7 @@ const Navbar = props => {
           </div>
         )}
         {MenuClick && (
-          <div className="container-fluid">
+          <div className="container-fluid ">
             <ul style={{ textAlign: "left", listStyle: "none" }}>
               <li className="nav-item py-2 border-bottom">
                 <MyLink text={"HOME"} to={`/${RoutePath.Home}`} />

@@ -7,8 +7,8 @@ const Header = props => {
   const { bgimg, title, media, text } = props;
 
   const bgStyle = {
-    // paddingTop: media.mobile ? '30%' : media.tablet ? '20%' : '10%',
-    paddingBottom: media.mobile ? "38%" : media.tablet ? "20%" : "18%",
+    paddingTop: media.mobile ? '8rem' : media.tablet ? '8rem' : '10rem',
+    paddingBottom: media.mobile ? "5rem" : media.tablet ? "8rem" : "8rem",
     backgroundImage: `url(${bgimg})`,
     backgroundPosition: "center",
     backgroundSize: "cover",
@@ -25,7 +25,7 @@ const Header = props => {
       className="text-center text-light w-auto"
     >
       <Navbar {...props} />
-      <span className="text-uppercase "> {title}</span>
+      <div className="text-uppercase text-center"> {title}</div>
       <p className="py-3 ">{text}</p>
     </div>
   );
