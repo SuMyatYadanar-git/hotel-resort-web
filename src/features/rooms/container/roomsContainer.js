@@ -7,7 +7,8 @@ const Room = () => {
   return (
     <div className="container-fluid p-0">
       <RoomHeader />
-      <Roomcard />
+      <div className="pt-3"> <Roomcard /></div>
+      
     </div>
   );
 };

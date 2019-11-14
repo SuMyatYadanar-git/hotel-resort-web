@@ -34,7 +34,7 @@ const MyInput = props => {
         borderRadius: 0
       }}
       placeholder={placeHolder}
-      className={`form-control ${className}`}
+      className={`form-control form-rounded ${className}`}
       onFocus={e =>
         (document.getElementById(
           id

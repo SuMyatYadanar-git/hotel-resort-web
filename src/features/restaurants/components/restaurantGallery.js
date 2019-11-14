@@ -6,8 +6,8 @@ import Line from "../../../assets/image/line.png";
 import * as Font from "../../../config/font.config";
 import { fsc } from "../../../helper/fontControlHelper";
 
-const Dinner = props => {
-  const { media } = props;
+const RestaurantGallery = props => {
+  const { media, Data, Type, Time } = props;
   const [hover, setHover] = useState(false);
   const _handleHover = e => {
     setHover(!hover);
@@ -18,25 +18,23 @@ const Dinner = props => {
     }
   };
   return (
-    <div className="container text-left py-4">
+    <div className="container text-left border-bottom py-3">
       <div className="d-flex flex-column align-items-center">
-      <span
+        <span
           style={{
             fontSize: fsc(media, 35),
             fontFamily: Font.bodyTitle,
             fontWeight: "bold"
           }}
         >
-          DRINKS
+          {Type.toUpperCase()}
         </span>
         {/* file seprate */}
-        <p style={{ color: Colors.bodyText, fontWeight: "bold" }}>
-          11:00 Am - 2:00 Pm
-        </p>
+        <p style={{ color: Colors.bodyText, fontWeight: "bold" }}>{Time}</p>
       </div>
 
       <div className="d-flex flex-row flex-wrap">
-        {DinnerData.map((v, k) => (
+        {Data.map((v, k) => (
           <div className="col-lg-6 p-3" key={k}>
             <div
               className="d-flex flex-row bg-light"
@@ -65,13 +63,18 @@ const Dinner = props => {
                 </span>
                 <span
                   style={{
-                    color: Colors.navbg,fontSize: fsc(media, 14)
+                    color: Colors.navbg,
+                    fontSize: fsc(media, 14)
                   }}
                 >
                   {v.desc}
                 </span>
                 <span
-                  style={{ color: Colors.textGold, fontSize: fsc(media, 30),fontWeight:'bold' }}
+                  style={{
+                    color: Colors.textGold,
+                    fontSize: fsc(media, 30),
+                    fontWeight: "bold"
+                  }}
                 >
                   $ {v.Price}
                 </span>
@@ -84,55 +87,4 @@ const Dinner = props => {
   );
 };
 
-export default withMedia(Dinner);
-
-const DinnerData = [
-  {
-    id: 1,
-    Name: "ROAST & VEGETABLES",
-    Price: 300,
-    desc:
-      "Egg Beaters scrambled with slow-roasted tomatoes, onion, fresh spinach and mushrooms.",
-    ImgUrl: "/images/restaurant/breakfast/restaurant-01.jpg"
-  },
-  {
-    id: 2,
-    Name: "ROAST & VEGETABLES",
-    Price: 300,
-    desc:
-      "Egg Beaters scrambled with slow-roasted tomatoes, onion, fresh spinach and mushrooms.",
-    ImgUrl: "/images/restaurant/breakfast/restaurant-03.jpg"
-  },
-  {
-    id: 3,
-    Name: "ROAST & VEGETABLES",
-    Price: 300,
-    desc:
-      "Egg Beaters scrambled with slow-roasted tomatoes, onion, fresh spinach and mushrooms.",
-    ImgUrl: "/images/restaurant/breakfast/restaurant-07.jpg"
-  },
-  {
-    id: 4,
-    Name: "ROAST & VEGETABLES",
-    Price: 300,
-    desc:
-      "Egg Beaters scrambled with slow-roasted tomatoes, onion, fresh spinach and mushrooms.",
-    ImgUrl: "/images/restaurant/breakfast/restaurant-08.jpg"
-  },
-  {
-    id: 5,
-    Name: "ROAST & VEGETABLES",
-    Price: 300,
-    desc:
-      "Egg Beaters scrambled with slow-roasted tomatoes, onion, fresh spinach and mushrooms.",
-    ImgUrl: "/images/restaurant/breakfast/restaurant-11.jpg"
-  },
-  {
-    id: 6,
-    Name: "ROAST & VEGETABLES",
-    Price: 300,
-    desc:
-      "Egg Beaters scrambled with slow-roasted tomatoes, onion, fresh spinach and mushrooms.",
-    ImgUrl: "/images/restaurant/breakfast/restaurant-18.jpg"
-  }
-];
+export default withMedia(RestaurantGallery);

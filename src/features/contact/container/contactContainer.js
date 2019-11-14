@@ -9,7 +9,7 @@ const Contact = () => {
   return (
     <div className="container-fluid p-0">
       <ContactHeader />
-      <div className='container'>
+      <div className='container pt-4'>
          <div className='d-flex flex-wrap'>
         <div className='col-lg-6'>
             <ContactInfo/>   

@@ -23,7 +23,7 @@ const AvailabilityCheck = props => {
     const _handleToggle = () => { setIsOpen(!isOpen) }
 
     return (
-        <div className='container text-left' style={{ color: Colors.textGold }}>
+        <div className='text-left' style={{ color: Colors.textGold }}>
             <div className='d-flex flex-row flex-wrap justify-content-md-between justify-content-center'>
                 <div className='flex-fill m-1' >
                     <span >HOTEL</span>

@@ -29,7 +29,7 @@ const responsive = {
 const Event = props => {
   const {media}=props
   return (
-    <div className="container py-5">
+    <div className="container py-1 pt-2">
       <div className="position-absolute pl-4">
         <span style={{ fontSize: 35}}>Our Events</span>
       </div>

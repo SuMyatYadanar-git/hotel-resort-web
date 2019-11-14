@@ -11,10 +11,12 @@ const Navbar = props => {
   const { media } = props;
 
   const [MenuClick, setMenuClick] = useState(false);
-  const handleMenuClick = () => {
+  const handleMenuClick = () => {    
     setMenuClick(!MenuClick);
   };
   useEffect(() => {
+    if(media.desktop||media.tablet)
+    {setMenuClick(false)}
     window.onscroll = () => {
       const MyNav = document.getElementById("NavbarContainer");
 
@@ -36,7 +38,7 @@ const Navbar = props => {
     <div className="sticky-top position-fixed w-100">
       {document.body.scrollTop === 0 ? (
         <div
-          className="d-flex flex-row flex-wrap justify-content-between px-4 border-bottom py-2  mx-4 text-light"
+          className="d-flex flex-row flex-wrap justify-content-between px-4 border-bottom py-2  text-light"
           style={{ fontSize: fsc(media, 13) ,borderBottom:'1px solid light'}}
           id="NavTitle"
         >
@@ -74,23 +76,21 @@ const Navbar = props => {
         style={{
           background: "none",
           zIndex: 2,
-          opacity: 0.9,
+          opacity: MenuClick?1: 0.9,
           transition: ".4s"
         }}
       >
-        <div style={{ width: 80}}>
+        <div style={{ width: 80 }}>
           <img src={Logo} alt="Logo" className="w-100" />
         </div>
-        {media.mobile&&MenuClick===false ? (
+        {media.mobile && MenuClick === false ? (
           <span
             style={{ fontSize: 25, color: Colors.textwhite }}
             onClick={handleMenuClick}
           >
             <i className="fa fa-list pt-3" />
           </span>
-        ) : media.mobile&&MenuClick === true ? (
-          null
-        ) : (
+        ) : media.mobile && MenuClick === true ? null : (
           <div className="nav nav-link" style={{ fontSize: fsc(media, 20) }}>
             <MyLink
               className="text-decoration-none pr-4"
@@ -119,18 +119,24 @@ const Navbar = props => {
           </div>
         )}
         {MenuClick && (
-          <div className="container-fluid ">
-            <ul style={{ textAlign: "left", listStyle: "none" }}>
-              <li className="nav-item py-2 border-bottom">
+          <div className="container-fluid bg-dark text-light w-75" style={{borderRadius:5}}>
+            <ul style={{ listStyle: "none" }} className="pl-2 text-left">
+              <div className="w-100 text-right">
+                <i
+                  className="fa fa-times px-2 pt-3"
+                  onClick={handleMenuClick}
+                />
+              </div>
+              <li className="py-2 border-bottom">
                 <MyLink text={"HOME"} to={`/${RoutePath.Home}`} />
               </li>
-              <li className="nav-item py-2 border-bottom">
+              <li className="py-2 border-bottom">
                 <MyLink text={"ROOM"} to={`/${RoutePath.Room}`} />
               </li>
-              <li className="nav-item py-2 border-bottom">
+              <li className="py-2 border-bottom">
                 <MyLink text={"RESTAURANT"} to={`/${RoutePath.Restaurant}`} />
               </li>
-              <li className="nav-item pt-2">
+              <li className="pt-2">
                 <MyLink text={"CONTACT"} to={`/${RoutePath.Contact}`} />
               </li>
             </ul>

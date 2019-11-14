@@ -19,13 +19,15 @@ const Home = props => {
         <HomeCarousel media={media} />
         <Navbar />
       </div>
+      <div className=" container pt-3">
+        <CheckAvability />
+        <OurRooms />
+        <AboutUs />
+        <Event />
+        <Services />
+      </div>
 
-      <CheckAvability />
-      <AboutUs />
       {/* <Carousel /> */}
-      <Event />
-      <OurRooms />
-      <Services />
       <StaffInfo />
     </div>
   );

@@ -16,7 +16,7 @@ const OurRooms = () => {
         }
     }
     return (
-        <div className='container text-center'>
+        <div className='pt-2 text-center'>
             <div className='d-flex flex-column align-items-center'>
                 <span style={{ fontSize: 35, fontFamily: Font.bodyTitle }}>Our Rooms</span>
                 <img className='py-2' src={Line} alt='line' style={{ width: '250px' }} />
@@ -27,15 +27,15 @@ const OurRooms = () => {
             <div className='d-flex flex-row flex-wrap'>
                 {RoomInfo.map((v, k) =>
                     <div className='col-lg-4 p-4' style={{ cursor: 'pointer' }} key={k}>
-                        <div className='d-flex flex-column bg-light' style={{ transition: '1s' }}>
-                            <div className='w-100' style={{ overflow: 'hidden' }} >
+                        <div className='d-flex flex-column ' style={{ transition: '1s', backgroundColor: '#e8e8e8', }}>
+                            <div className='w-100' style={{ overflow: 'hidden' }}>
                                 <img
                                     src={process.env.PUBLIC_URL + `${v.RoomImgUrl}`}
                                     id={v.id}
                                     onMouseLeave={(id) => _handleHover(id)}
                                     onMouseOver={(id) => _handleHover(id)}
                                     className='w-100 d-block'
-                                    style={{ margin: '0 auto', transition: '1s' }}
+                                    style={{ margin: '0 auto', transition: '1s', }}
                                     alt='rooms'
                                 />
                             </div>

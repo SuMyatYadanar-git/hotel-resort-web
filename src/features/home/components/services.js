@@ -11,7 +11,7 @@ import BedRoom from "../../../assets/icons/master-bedroom.png";
 
 const Services = props => {
   return (
-    <div>
+    <div className="px-3">
       <div className="d-flex justify-content-center flex-wrap">
         <div className="flex-fill px-2 py-1">
           <ServiceItem img={Wifi} text={"WIFI COVERAGE"} />

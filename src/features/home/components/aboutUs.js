@@ -5,10 +5,10 @@ import AboutUsImg from "../../../assets/image/aboutUs/abb.png";
 
 const AboutUs = () => {
   return (
-    <div className="container py-5">
+    <div className=" py-5">
      
       <div className="row">
-        <div class="col-lg-6 text-center">
+        <div className="col-lg-6 text-center">
         <div style={{ fontSize: 35 }}> About Us</div>
       <div>
         {" "}
@@ -27,7 +27,7 @@ const AboutUs = () => {
           </div>
         </div>
         <div className="col-lg-6 px-4">
-          <img src={AboutUsImg} alt="abb" class="d-block w-100 h-100" />
+          <img src={AboutUsImg} alt="abb" className="d-block w-100 h-100" />
         </div>
       </div>
     </div>

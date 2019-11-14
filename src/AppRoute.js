@@ -2,7 +2,6 @@ import React from "react";
 import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
 import * as RoutePath from "./config/route.config";
 import Home from "./features/home/container/homeContainer";
-import Navbar from "./features/app/navbar/navbar";
 import Room from "./features/rooms/container/roomsContainer";
 import Contact from "./features/contact/container/contactContainer";
 import Restaurant from "./features/restaurants/container/restaurantContainer";
