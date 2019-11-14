@@ -35,7 +35,7 @@ const SliderContent = ({ img, media }) => {
             <img src={img}
                 alt="slider_pics"
                 className=" img-fluid w-100"
-                style={{ height: media.desktop ? 900 : media.tablet ? 700 : 550 }}
+                style={{ height: media.desktop ? 600 : media.tablet ? 500 : 550 }}
             />
         </div>
     )
