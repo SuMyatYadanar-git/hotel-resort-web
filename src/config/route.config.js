@@ -6,6 +6,8 @@ export const Restaurant = 'restaurant'
 
 export const Contact = 'contact'
 
-export const checkavailability ='checkavailability'
+export const checkavailability ='check-availability'
 
-export const viewdetail= 'viewdetail'
+export const viewdetail= 'view-detail'
+
+export const upgradepage = 'upgrade-page'
