@@ -20,29 +20,33 @@ const Navbar = props => {
     }
     window.onscroll = () => {
       const MyNav = document.getElementById("NavbarContainer");
+      const navTitle = document.getElementById("NavTitle");
+
       if (
         document.body.scrollTop > 30 ||
         document.documentElement.scrollTop > 30
       ) {
         MyNav.style.background = "black";
         MyNav.style.position = "fixed";
-        MyNav.style.top = 0;
+        MyNav.style.top = 0;        
+        navTitle.style.visibility="hidden"
       } else {
         MyNav.style.background = "none";
         MyNav.style.position = "relative";
+        navTitle.style.visibility="visible"
+
       }
     };
   });
 
   return (
-    <div className="sticky-top position-fixed w-100">
-      {window.pageYOffset > 0 ? null : (
+    <div className="sticky-top position-fixed w-100">      
         <div
           className="d-flex flex-row flex-wrap justify-content-between px-3 border-bottom py-2 text-light"
           style={{
             fontSize: fsc(media, 13),
             borderBottom: "1px solid light",
-            background: "rgba(255, 255, 255, 0.2)"
+            background: "rgba(255, 255, 255, 0.2)",
           }}
           id="NavTitle"
         >
@@ -73,7 +77,6 @@ const Navbar = props => {
             </span>
           )}
         </div>
-      )}
       <div
         id="NavbarContainer"
         className="d-flex flex-row w-100 justify-content-between py-2 px-3"

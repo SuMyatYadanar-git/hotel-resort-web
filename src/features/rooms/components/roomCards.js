@@ -81,7 +81,7 @@ const RoomCards = props => {
                       <td style={{ fontSize: fsc(media, 10) }}>
                         <i className="fa fa-square"></i>
                       </td>
-                      <td>Size : {v.size} Person(s)</td>
+                      <td>Size : {v.size} m</td>
                       <td style={{ fontSize: fsc(media, 10) }}>
                         <i className="fa fa-square"></i>
                       </td>
@@ -130,8 +130,9 @@ const RoomInfo = [
   {
     id: 1,
     max: 1,
-    view: "Family Room",
-    size: 200,
+    type: "Family Room",
+    view: "Sunset",
+    size: 55,
     bed: 1,
     pricePerDay: 300,
     RoomImgUrl: "/images/rooms/DeluxeRoom/Deluxe1.jpg",
@@ -142,8 +143,9 @@ const RoomInfo = [
   {
     id: 2,
     max: 2,
-    view: "Family Room",
-    size: 200,
+    type: "Family Room",
+    view: "Sunset",
+    size: 65,
     bed: 1,
     pricePerDay: 300,
     RoomImgUrl: "/images/rooms/FamilyRoom/familyRoom1.jpg",
@@ -154,8 +156,9 @@ const RoomInfo = [
   {
     id: 3,
     max: 3,
-    view: "Luxury Room",
-    size: 200,
+    type: "Luxury Room",
+    view: "Pool",
+    size: 45,
     bed: 1,
     pricePerDay: 300,
     RoomImgUrl: "/images/rooms/LuxuryRoom/luxuryRoom1.jpg",
@@ -166,8 +169,9 @@ const RoomInfo = [
   {
     id: 4,
     max: 4,
-    view: "Single Room",
-    size: 200,
+    type: "Single Room",
+    view: "Beach",
+    size: 45,
     bed: 1,
     pricePerDay: 300,
     RoomImgUrl: "/images/rooms/StandardRoom/standardRoom1.jpg",
@@ -178,8 +182,9 @@ const RoomInfo = [
   {
     id: 5,
     max: 5,
-    view: "Single Room",
-    size: 200,
+    type: "Single Room",
+    view: "Mountains",
+    size: 45,
     bed: 1,
     pricePerDay: 300,
     RoomImgUrl: "/images/rooms/StandardRoom/standardRoom1.jpg",
@@ -190,8 +195,9 @@ const RoomInfo = [
   {
     id: 6,
     max: 6,
-    view: "Single Room",
-    size: 200,
+    type: "Single Room",
+    view: "Beach",
+    size: 45,
     bed: 1,
     pricePerDay: 300,
     RoomImgUrl: "/images/rooms/StandardRoom/standardRoom1.jpg",
