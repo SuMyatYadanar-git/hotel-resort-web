@@ -2,9 +2,12 @@
     left: 3% !important;
     z-index: 1;
     text-align:center;
+    
   }
   .slick-next {
     right: 3% !important;
     z-index: 1;
     text-align:center;
+   
   }
+  

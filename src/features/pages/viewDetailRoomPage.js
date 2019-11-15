@@ -39,7 +39,7 @@ const ViewDetailRoomPage = () => {
       <div className="container">
         {/* carousel */}
         <div className="d-flex flex-row flex-wrap">
-          <div className="col-lg-6 pt-2 p-0">
+          <div className="col-lg-6 pt-2 px-1 p-0">
             <Carousel
               showIndicators={false}
               dynamicHeight={true}
@@ -138,15 +138,15 @@ const ViewDetailRoomPage = () => {
               </div>
             </Carousel>
           </div>
-          {/* ================================================================ */}
 
-          <div className="pt-2 col-lg-6 p-0">
+          {/* ================================================================ */}
+          <div className="pt-2 px-1 col-lg-6 p-0">
             <div className="d-flex flex-column text-center p-1" style={{ backgroundColor: '#F1F1F1' }}>
               <div className="pt-3 py-3 font-weight-bold" style={{ fontSie: '5rem' }}>{"LUXURY ROOM"}</div>
               <div className="py-3" style={{ fontSize: '2rem', color: 'grey' }}>{"Start from $300/night"}</div>
               <div className="p-2 border ">
                 <div className="py-3  ">
-                  <div>Arrival Date </div>
+                  <div>Arrival Date</div>
                   <div >  <MyDatePicker Date={startDate} HandleSelect={_handleSelect} value={value} HandleToggle={_handleToggle} IsOpen={isOpen} /></div>
                 </div>
                 <div className="py-4 ">

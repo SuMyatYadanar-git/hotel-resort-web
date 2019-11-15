@@ -9,6 +9,7 @@ import CheckAvailabilityPage from "./features/pages/checkAvailabilityPage";
 import ViewDetailRoomPage from "./features/pages/viewDetailRoomPage";
 import UpgradePage from "./features/pages/upgradePage";
 
+import ScrollTopToRoute from './ScrollTopToRoute'
 
 const AppRoute = props => {
   
@@ -16,13 +17,13 @@ const AppRoute = props => {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path={`/`} exact component={Home} />
-        <Route path={`/${RoutePath.Room}`} component={Room} />
-        <Route path={`/${RoutePath.Contact}`} component={Contact} />
-        <Route path={`/${RoutePath.Restaurant}`} component={Restaurant} />
-        <Route path={`/${RoutePath.checkavailability}`} component={CheckAvailabilityPage} />
-        <Route path={`/${RoutePath.viewdetail}`} component={ViewDetailRoomPage} />
-        <Route path={`/${RoutePath.upgradepage}`} component={UpgradePage} />
+        <ScrollTopToRoute  path={`/`} exact component={Home} />
+        <ScrollTopToRoute path={`/${RoutePath.Room}`} component={Room} />
+        <ScrollTopToRoute path={`/${RoutePath.Contact}`} component={Contact} />
+        <ScrollTopToRoute path={`/${RoutePath.Restaurant}`} component={Restaurant} />
+        <ScrollTopToRoute path={`/${RoutePath.checkavailability}`} component={CheckAvailabilityPage} />
+        <ScrollTopToRoute path={`/${RoutePath.viewdetail}`} component={ViewDetailRoomPage} />
+        <ScrollTopToRoute path={`/${RoutePath.upgradepage}`} component={UpgradePage} />
         <Redirect to={`/`} />
       </Switch>
     </BrowserRouter>

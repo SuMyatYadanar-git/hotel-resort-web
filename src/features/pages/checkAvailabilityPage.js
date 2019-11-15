@@ -7,8 +7,9 @@ import { fsc } from "../../helper/fontControlHelper";
 import * as Colors from "../../config/color.config";
 import * as Font from '../../config/font.config'
 
-import AvailabilityCheck from "../home/components/checkAvailability";
+import HomecheckAvailability from "../home/components/HomecheckAvailability";
 import MyButton from "../../tools/myButton";
+import Footer from '../app/footer'
 
 const CheckAvailabilityPage = props => {
   const { media } = props;
@@ -18,8 +19,8 @@ const CheckAvailabilityPage = props => {
   return (
     <div>
       <Header bgimg={bg1} />
-      <div className="container py-4">
-        <AvailabilityCheck />
+      <div className="container py-3">
+        {/* <HomecheckAvailability /> */}
         <div className="py-4">
           {availableRoom.map((v, k) => (
             <div key={k}>
@@ -82,6 +83,7 @@ const CheckAvailabilityPage = props => {
           ))}
         </div>
       </div>
+      <Footer/>
     </div>
   );
 };

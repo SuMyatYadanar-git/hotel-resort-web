@@ -8,6 +8,8 @@ import Line from "../../../assets/image/line.png";
 import * as Font from "../../../config/font.config";
 import MyButton from "../../../tools/myButton";
 import { fsc } from "../../../helper/fontControlHelper";
+import {RoomInfo} from '../model/RoomCardData.json'
+
 
 const RoomCards = props => {
   const { media } = props;
@@ -65,7 +67,7 @@ const RoomCards = props => {
               </div>
               <div className="d-flex flex-column text-left">
                 <span className="py-2">{v.desc}</span>
-                <table className="text-left my-2">
+                <table className="text-left my-2 ">
                   <tbody style={{ fontSize: fsc(media, 15) }}>
                     <tr style={{ height: "2rem" }}>
                       <td style={{ fontSize: fsc(media, 10) }}>
@@ -126,83 +128,83 @@ const RoomCards = props => {
 
 export default withMedia(RoomCards);
 
-const RoomInfo = [
-  {
-    id: 1,
-    max: 1,
-    type: "Family Room",
-    view: "Sunset",
-    size: 55,
-    bed: 1,
-    pricePerDay: 300,
-    RoomImgUrl: "/images/rooms/DeluxeRoom/Deluxe1.jpg",
-    desc:
-      "Pellentesque posuere mauris ut interdum efficitur. Duis ac purus ante. Proin facilisis nec tortor consectetur vehicula.",
-    isAvailable: true
-  },
-  {
-    id: 2,
-    max: 2,
-    type: "Family Room",
-    view: "Sunset",
-    size: 65,
-    bed: 1,
-    pricePerDay: 300,
-    RoomImgUrl: "/images/rooms/FamilyRoom/familyRoom1.jpg",
-    desc:
-      "Pellentesque posuere mauris ut interdum efficitur. Duis ac purus ante. Proin facilisis nec tortor consectetur vehicula.",
-    isAvailable: false
-  },
-  {
-    id: 3,
-    max: 3,
-    type: "Luxury Room",
-    view: "Pool",
-    size: 45,
-    bed: 1,
-    pricePerDay: 300,
-    RoomImgUrl: "/images/rooms/LuxuryRoom/luxuryRoom1.jpg",
-    desc:
-      "Pellentesque posuere mauris ut interdum efficitur. Duis ac purus ante. Proin facilisis nec tortor consectetur vehicula.",
-    isAvailable: false
-  },
-  {
-    id: 4,
-    max: 4,
-    type: "Single Room",
-    view: "Beach",
-    size: 45,
-    bed: 1,
-    pricePerDay: 300,
-    RoomImgUrl: "/images/rooms/StandardRoom/standardRoom1.jpg",
-    desc:
-      "Pellentesque posuere mauris ut interdum efficitur. Duis ac purus ante. Proin facilisis nec tortor consectetur vehicula.",
-    isAvailable: false
-  },
-  {
-    id: 5,
-    max: 5,
-    type: "Single Room",
-    view: "Mountains",
-    size: 45,
-    bed: 1,
-    pricePerDay: 300,
-    RoomImgUrl: "/images/rooms/StandardRoom/standardRoom1.jpg",
-    desc:
-      "Pellentesque posuere mauris ut interdum efficitur. Duis ac purus ante. Proin facilisis nec tortor consectetur vehicula.",
-    isAvailable: true
-  },
-  {
-    id: 6,
-    max: 6,
-    type: "Single Room",
-    view: "Beach",
-    size: 45,
-    bed: 1,
-    pricePerDay: 300,
-    RoomImgUrl: "/images/rooms/StandardRoom/standardRoom1.jpg",
-    desc:
-      "Pellentesque posuere mauris ut interdum efficitur. Duis ac purus ante. Proin facilisis nec tortor consectetur vehicula.",
-    isAvailable: true
-  }
-];
+// const RoomInfo = [
+//   {
+//     id: 1,
+//     max: 1,
+//     type: "Family Room",
+//     view: "Sunset",
+//     size: 55,
+//     bed: 1,
+//     pricePerDay: 300,
+//     RoomImgUrl: "/images/rooms/DeluxeRoom/Deluxe1.jpg",
+//     desc:
+//       "Pellentesque posuere mauris ut interdum efficitur. Duis ac purus ante. Proin facilisis nec tortor consectetur vehicula.",
+//     isAvailable: true
+//   },
+//   {
+//     id: 2,
+//     max: 2,
+//     type: "Family Room",
+//     view: "Sunset",
+//     size: 65,
+//     bed: 1,
+//     pricePerDay: 300,
+//     RoomImgUrl: "/images/rooms/FamilyRoom/familyRoom1.jpg",
+//     desc:
+//       "Pellentesque posuere mauris ut interdum efficitur. Duis ac purus ante. Proin facilisis nec tortor consectetur vehicula.",
+//     isAvailable: false
+//   },
+//   {
+//     id: 3,
+//     max: 3,
+//     type: "Luxury Room",
+//     view: "Pool",
+//     size: 45,
+//     bed: 1,
+//     pricePerDay: 300,
+//     RoomImgUrl: "/images/rooms/LuxuryRoom/luxuryRoom1.jpg",
+//     desc:
+//       "Pellentesque posuere mauris ut interdum efficitur. Duis ac purus ante. Proin facilisis nec tortor consectetur vehicula.",
+//     isAvailable: false
+//   },
+//   {
+//     id: 4,
+//     max: 4,
+//     type: "Single Room",
+//     view: "Beach",
+//     size: 45,
+//     bed: 1,
+//     pricePerDay: 300,
+//     RoomImgUrl: "/images/rooms/StandardRoom/standardRoom1.jpg",
+//     desc:
+//       "Pellentesque posuere mauris ut interdum efficitur. Duis ac purus ante. Proin facilisis nec tortor consectetur vehicula.",
+//     isAvailable: false
+//   },
+//   {
+//     id: 5,
+//     max: 5,
+//     type: "Single Room",
+//     view: "Mountains",
+//     size: 45,
+//     bed: 1,
+//     pricePerDay: 300,
+//     RoomImgUrl: "/images/rooms/StandardRoom/standardRoom1.jpg",
+//     desc:
+//       "Pellentesque posuere mauris ut interdum efficitur. Duis ac purus ante. Proin facilisis nec tortor consectetur vehicula.",
+//     isAvailable: true
+//   },
+//   {
+//     id: 6,
+//     max: 6,
+//     type: "Single Room",
+//     view: "Beach",
+//     size: 45,
+//     bed: 1,
+//     pricePerDay: 300,
+//     RoomImgUrl: "/images/rooms/StandardRoom/standardRoom1.jpg",
+//     desc:
+//       "Pellentesque posuere mauris ut interdum efficitur. Duis ac purus ante. Proin facilisis nec tortor consectetur vehicula.",
+//     isAvailable: true
+//   }
+// ];

@@ -50,5 +50,5 @@ const ContactMap = props => {
 };
 
 export default GoogleApiWrapper({
-  apiKey: "AIzaSyBgru9d8427Q2J_iNok_8dybJ5HRxxoSw0"
+  apiKey: "AIzaSyAcWK8WHabUh0BMDZuIIPo0qfWXWarBzoo"
 })(withMedia(ContactMap));

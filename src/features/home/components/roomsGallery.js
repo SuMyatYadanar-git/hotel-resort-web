@@ -4,6 +4,8 @@ import * as Colors from '../../../config/color.config'
 import Line from '../../../assets/image/line.png'
 import * as Font from '../../../config/font.config'
 
+import {RoomInfo} from  '../model/HomeModel.json'
+
 const OurRooms = () => {
     const [hover, setHover] = useState(false)
     const _handleHover = (e) => {
@@ -15,6 +17,7 @@ const OurRooms = () => {
             document.getElementById(e.target.id).style.transform = 'scale(1.2)'
         }
     }
+    
     return (
         <div className='pt-2 text-center'>
             <div className='d-flex flex-column align-items-center'>
@@ -54,11 +57,11 @@ const OurRooms = () => {
 
 export default OurRooms
 
-const RoomInfo = [
-    { id: 1, RoomType: 'Single Room', PricePerNight: 200, RoomImgUrl: '/images/rooms/DeluxeRoom/Deluxe1.jpg' },
-    { id: 2, RoomType: 'Family Room', PricePerNight: 200, RoomImgUrl: '/images/rooms/FamilyRoom/familyRoom1.jpg' },
-    { id: 3, RoomType: 'Luxury Room', PricePerNight: 200, RoomImgUrl: '/images/rooms/LuxuryRoom/luxuryRoom1.jpg' },
-    { id: 4, RoomType: 'Single Room', PricePerNight: 200, RoomImgUrl: '/images/rooms/StandardRoom/standardRoom1.jpg' },
-    { id: 5, RoomType: 'Single Room', PricePerNight: 200, RoomImgUrl: '/images/rooms/StandardRoom/standardRoom1.jpg' },
-    { id: 6, RoomType: 'Single Room', PricePerNight: 200, RoomImgUrl: '/images/rooms/StandardRoom/standardRoom1.jpg' },
-]
+// const RoomInfo = [
+//     { id: 1, RoomType: 'Single Room', PricePerNight: 200, RoomImgUrl: '/images/rooms/DeluxeRoom/Deluxe1.jpg' },
+//     { id: 2, RoomType: 'Family Room', PricePerNight: 200, RoomImgUrl: '/images/rooms/FamilyRoom/familyRoom1.jpg' },
+//     { id: 3, RoomType: 'Luxury Room', PricePerNight: 200, RoomImgUrl: '/images/rooms/LuxuryRoom/luxuryRoom1.jpg' },
+//     { id: 4, RoomType: 'Single Room', PricePerNight: 200, RoomImgUrl: '/images/rooms/StandardRoom/standardRoom1.jpg' },
+//     { id: 5, RoomType: 'Single Room', PricePerNight: 200, RoomImgUrl: '/images/rooms/StandardRoom/standardRoom1.jpg' },
+//     { id: 6, RoomType: 'Single Room', PricePerNight: 200, RoomImgUrl: '/images/rooms/StandardRoom/standardRoom1.jpg' },
+// ]

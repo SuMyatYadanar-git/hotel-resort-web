@@ -1,0 +1,43 @@
+{
+    "RoomInfo": [
+        {
+            "id": 1,
+            "RoomType": "Single Room",
+            "PricePerNight": "200",
+            "RoomImgUrl": " /images/rooms/DeluxeRoom/Deluxe1.jpg"
+        },
+        {
+            "id": 2,
+            "RoomType": "Family Room",
+            "PricePerNight": "200",
+            "RoomImgUrl": "/images/rooms/FamilyRoom/familyRoom1.jpg"
+        },
+        {
+            "id": 3,
+            "RoomType": "Luxury Room",
+            "PricePerNight": "200",
+            "RoomImgUrl": "/images/rooms/LuxuryRoom/luxuryRoom1.jpg"
+        },
+        {
+            "id": 4,
+            "RoomType": "Single Room",
+            "PricePerNight": "200",
+            "RoomImgUrl": "/images/rooms/StandardRoom/standardRoom1.jpg"
+        },
+        {
+            "id": 5,
+            "RoomType": "Single Room",
+            "PricePerNight": "200",
+            "RoomImgUrl": "/images/rooms/StandardRoom/standardRoom1.jpg"
+        },
+        {
+            "id": 6,
+            "RoomType": "Single Room",
+            "PricePerNight": "200",
+            "RoomImgUrl": "/images/rooms/StandardRoom/standardRoom1.jpg"
+        }
+    ]
+    
+}
+
+

@@ -5,7 +5,7 @@ import AboutUsImg from "../../../assets/image/aboutUs/abb.png";
 
 const AboutUs = () => {
   return (
-    <div className=" py-5">
+    <div className=" py-3">
      
       <div className="row">
         <div className="col-lg-6 text-center">

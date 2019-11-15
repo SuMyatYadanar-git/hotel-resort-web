@@ -10,7 +10,7 @@ const Room = () => {
     <div className="container-fluid p-0">
       <RoomHeader />
       <div className="pt-3"> <Roomcard /></div>
-      <Footer/>
+      <Footer />
     </div>
   );
 };

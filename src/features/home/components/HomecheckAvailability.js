@@ -40,13 +40,13 @@ const AvailabilityCheck = props => {
                 </div>
                 <div className='flex-fill m-1' >
                     <span>DEPATURE DATE</span>
-                    <MyDatePicker Date={endDate} HandleSelect={_handleSelect} value={value}/>
+                    <MyDatePicker Date={endDate} HandleSelect={_handleSelect} value={value} HandleToggle={_handleToggle} />
                 </div>
-                <div className='flex-fill m-1' >
+                {/* <div className='flex-fill m-1' >
                     <span>HOTEL</span>
                     <div style={{ height: 60, lineHeight:4.2 }}><MyDropDown /></div>
-                </div>
-                <div className='flex-fill m-1 align-self-end' >
+                </div> */}
+                <div className='flex-fill m-1 align-self-end pt-3' >
                   <Link to={`/${RoutePath.checkavailability}`} >
                      <MyButton style={{ height: 60 }} text={'Check Availability'}  onClick={()=>location.pathname === '/check-availability' && alert('checking availabiliy rom') }/>
                  </Link>

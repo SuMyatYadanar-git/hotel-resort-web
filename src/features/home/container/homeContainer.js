@@ -3,7 +3,7 @@ import { withMedia } from 'react-media-query-hoc'
 
 import AboutUs from "../components/aboutUs";
 import Footer from '../../app/footer'
-import CheckAvability from "../components/checkAvailability";
+import CheckAvability from "../components/HomecheckAvailability";
 import Event from "../components/event";
 import OurRooms from "../components/roomsGallery";
 import Services from "../components/services";
@@ -19,7 +19,7 @@ const Home = props => {
         <Navbar />
       </div>
       <div className=" container pt-3">
-        <CheckAvability />
+        {/* <CheckAvability /> */}
         <OurRooms />
         <AboutUs />
         <Event />

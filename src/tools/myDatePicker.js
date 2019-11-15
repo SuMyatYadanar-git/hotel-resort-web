@@ -35,6 +35,7 @@ const MyDatePicker = props => {
                 Depature Date is
         <div>{endDate}</div>
         </div> */}
+
     </div>
   );
 };
