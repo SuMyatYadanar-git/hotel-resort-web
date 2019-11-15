@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import {Link} from 'react-router-dom'
+import {withRouter } from 'react-router-dom'
 import originalMoment from 'moment'
 import { extendMoment } from 'moment-range'
 
@@ -10,6 +11,8 @@ import * as Colors from '../../../config/color.config'
 import * as RoutePath from '../../../config/route.config'
 
 const AvailabilityCheck = props => {
+    const {location} = props
+   
     const moment = extendMoment(originalMoment)
     const today = moment()
     const [isOpen, setIsOpen] = useState(false)
@@ -44,7 +47,9 @@ const AvailabilityCheck = props => {
                     <div style={{ height: 60, lineHeight:4.2 }}><MyDropDown /></div>
                 </div>
                 <div className='flex-fill m-1 align-self-end' >
-                  <Link to={`/${RoutePath.checkavailability}`} ><MyButton style={{ height: 60 }} text={'Check Availability'} /></Link>
+                  <Link to={`/${RoutePath.checkavailability}`} >
+                     <MyButton style={{ height: 60 }} text={'Check Availability'}  onClick={()=>location.pathname === '/check-availability' && alert('checking availabiliy rom') }/>
+                 </Link>
                 </div>
             </div>
 
@@ -53,4 +58,4 @@ const AvailabilityCheck = props => {
     )
 }
 
-export default AvailabilityCheck
+export default withRouter(AvailabilityCheck)

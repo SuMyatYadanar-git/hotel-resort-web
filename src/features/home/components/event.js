@@ -75,7 +75,7 @@ export default withMedia(Event);
 export const CustomButtonGroup = props => {
   const { next, previous } = props;
   return (   
-      <div className="custom-button-group position-absolute" style={{marginTop:-430,marginLeft:'90%'}}>
+      <div className="custom-button-group position-absolute" style={{marginTop:-220,marginLeft:'90%'}}>
       <i onClick={() => previous()} className="fa fa-chevron-left fa-2x pr-4" style={{cursor:'pointer'}}/>
       <i onClick={() => next()} className="fa fa-chevron-right fa-2x" style={{cursor:'pointer'}}/>
     </div>

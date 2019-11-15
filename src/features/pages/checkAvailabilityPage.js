@@ -30,52 +30,52 @@ const CheckAvailabilityPage = props => {
                       fontSize: fsc(media, 35),
                       fontFamily: Font.bodyTitle,
                       fontWeight: "bold",
-                      color:Colors.bodyText                      
+                      color: Colors.bodyText
                     }}
                   >
                     {v.type}
                   </span>
-                <div className="d-flex flex-row py-3 flex-wrap w-100">
-                  
-                  <div className="col-lg-4">
-                    <img src={v.RoomImgUrl} className="w-100" />
+                  <div className="d-flex flex-row py-3 flex-wrap w-100">
+
+                    <div className="col-lg-4">
+                      <img src={v.RoomImgUrl} className="w-100" />
+                    </div>
+                    <div className="col-lg-5 py-2">
+                      <table className="text-left w-100">
+                        <tbody style={{ fontSize: fsc(media, 15) }}>
+                          <tr style={{ height: "1.5rem" }}>
+                            <td style={{ fontSize: fsc(media, 15) }}>
+                              <i className="fa fa-male px-2"></i>
+                            </td>
+                            <td>Max : {v.max} Person(s)</td>
+                            <td style={{ fontSize: fsc(media, 15) }}>
+                              <i className="fa fa-binoculars px-2"></i>
+                            </td>
+                            <td>View : {v.view}</td>
+                          </tr>
+                          <tr style={{ height: "1.5rem" }}>
+                            <td style={{ fontSize: fsc(media, 15) }}>
+                              <i className="fa fa-arrows-alt px-2"></i>
+                            </td>
+                            <td>Size : {v.size} m</td>
+                            <td style={{ fontSize: fsc(media, 15) }}>
+                              <i className="fa fa-bed px-2"></i>
+                            </td>
+                            <td>Bed : {v.bed}</td>
+                          </tr>
+                          <tr style={{ height: "1.5rem" }}>
+                            <td style={{ fontSize: fsc(media, 15) }}>
+                              <i className="fa fa-money px-2"></i>
+                            </td>
+                            <td>Price : {v.pricePerDay} $</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <div className="col-lg-2 py-2">
+                      <MyButton text={"Book Now"} height={"48px"} />
+                    </div>
                   </div>
-                  <div className="col-lg-5 py-2">
-                    <table className="text-left w-100">
-                      <tbody style={{ fontSize: fsc(media, 15) }}>
-                        <tr style={{ height: "1.5rem" }}>
-                          <td style={{ fontSize: fsc(media, 15) }}>
-                            <i className="fa fa-male px-2"></i>
-                          </td>
-                          <td>Max : {v.max} Person(s)</td>
-                          <td style={{ fontSize: fsc(media, 15) }}>
-                            <i className="fa fa-binoculars px-2"></i>
-                          </td>
-                          <td>View : {v.view}</td>
-                        </tr>
-                        <tr style={{ height: "1.5rem" }}>
-                          <td style={{ fontSize: fsc(media, 15) }}>
-                            <i className="fa fa-arrows-alt px-2"></i>
-                          </td>
-                          <td>Size : {v.size} m</td>
-                          <td style={{ fontSize: fsc(media, 15) }}>
-                            <i className="fa fa-bed px-2"></i>
-                          </td>
-                          <td>Bed : {v.bed}</td>
-                        </tr>
-                        <tr style={{ height: "1.5rem" }}>
-                          <td style={{ fontSize: fsc(media, 15) }}>
-                            <i className="fa fa-money px-2"></i>
-                          </td>
-                          <td>Price : {v.pricePerDay} $</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                  <div className="col-lg-2 py-2">
-                    <MyButton text={"Book Now"} height={"48px"} />
-                  </div>
-                </div>
                 </div>
               ) : null}
             </div>

@@ -1,8 +1,19 @@
 import React from 'react'
+import { useStopwatch } from 'react-timer-hook';
 
 import '../../App.css'
 
+
 const UpgradePage = props => {
+    const {
+        seconds,
+        minutes,
+        hours,
+        days,
+        start,
+        pause,
+        reset,
+    } = useStopwatch({ autoStart: true });
     //     const bgStyle = {
     //         paddingTop: '100rem',
     //         paddingBottom:'20rem',
@@ -33,25 +44,26 @@ const UpgradePage = props => {
                     <div className="py-2"><h5> WE ARE WORKING HARDER! </h5></div>
                     <div className="py-2 pb-4"><h6> The website will be open</h6></div>
 
-                    <div className="d-flex justify-content-around bg-transparent border border-light col-lg-6 col-12 p-0 py-3" >
+                    <div className="d-flex justify-content-around bg-transparent border border-light  col-lg-6 col-12 p-0 py-3" >
 
+                        {/* <span>{days}</span>:<span>{hours}</span>:<span>{minutes}</span>:<span>{seconds}</span> */}
                         <div className="d-flex flex-column align-items-center px-3 py-2 " >
-                            <span>00</span>
+                            <span style={{ fontSize: '2rem', fontWeight: 'bold' }}>{days}</span>
                             <span>DAYS</span>
                         </div>
 
                         <div className="d-flex flex-column align-items-center px-3 py-2" >
-                            <span>00</span>
+                            <span style={{ fontSize: '2rem', fontWeight: 'bold' }}>{hours}</span>
                             <span>HOURS</span>
                         </div>
 
                         <div className="d-flex flex-column align-items-center px-3 py-2" >
-                            <span>00</span>
+                            <span style={{ fontSize: '2rem', fontWeight: 'bold' }}>{minutes}</span>
                             <span>MINUTES</span>
                         </div>
 
                         <div className="d-flex flex-column align-items-center px-3 py-2">
-                            <span>00</span>
+                            <span style={{ fontSize: '2rem', fontWeight: 'bold' }}>{seconds}</span>
                             <span>SECONDS</span>
                         </div>
 
