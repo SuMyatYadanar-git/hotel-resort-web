@@ -6,7 +6,7 @@ import * as Font from '../../../config/font.config'
 
 import {RoomInfo} from  '../model/HomeModel.json'
 
-const OurRooms = () => {
+const RoomsGallery = () => {
     const [hover, setHover] = useState(false)
     const _handleHover = (e) => {
         setHover(!hover)
@@ -30,7 +30,7 @@ const OurRooms = () => {
             <div className='d-flex flex-row flex-wrap'>
                 {RoomInfo.map((v, k) =>
                     <div className='col-lg-4 p-4' style={{ cursor: 'pointer' }} key={k}>
-                        <div className='d-flex flex-column ' style={{ transition: '1s', backgroundColor: '#e8e8e8', }}>
+                        <div className='d-flex flex-column' style={{ transition: '1s', backgroundColor: '#e8e8e8', }}>
                             <div className='w-100' style={{ overflow: 'hidden' }}>
                                 <img
                                     src={process.env.PUBLIC_URL + `${v.RoomImgUrl}`}
@@ -55,7 +55,7 @@ const OurRooms = () => {
     )
 }
 
-export default OurRooms
+export default RoomsGallery
 
 // const RoomInfo = [
 //     { id: 1, RoomType: 'Single Room', PricePerNight: 200, RoomImgUrl: '/images/rooms/DeluxeRoom/Deluxe1.jpg' },

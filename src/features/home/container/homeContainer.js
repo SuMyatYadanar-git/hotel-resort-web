@@ -5,7 +5,7 @@ import AboutUs from "../components/aboutUs";
 import Footer from '../../app/footer'
 import CheckAvability from "../components/HomecheckAvailability";
 import Event from "../components/event";
-import OurRooms from "../components/roomsGallery";
+import RoomsGallery from "../components/roomsGallery";
 import Services from "../components/services";
 import HomeCarousel from "../components/carousel";
 import Navbar from "../../app/navbar/navbar";
@@ -20,7 +20,7 @@ const Home = props => {
       </div>
       <div className=" container pt-3">
         {/* <CheckAvability /> */}
-        <OurRooms />
+        <RoomsGallery />
         <AboutUs />
         <Event />
         <Services />
