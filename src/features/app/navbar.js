@@ -2,11 +2,11 @@ import React, { useEffect, useState } from "react";
 import { withMedia } from "react-media-query-hoc";
 import { Link } from 'react-router-dom'
 
-import Logo from "../../../assets/icons/logo.png";
-import * as RoutePath from "../../../config/route.config";
-import { fsc } from "../../../helper/fontControlHelper";
-import MyLink from "../../../tools/myLink";
-import * as Colors from "../../../config/color.config";
+import Logo from "../../assets/icons/logo.png";
+import * as RoutePath from "../../config/route.config";
+import { fsc } from "../../helper/fontControlHelper";
+import MyLink from "../../tools/myLink";
+import * as Colors from "../../config/color.config";
 
 const Navbar = props => {
   const { media } = props;

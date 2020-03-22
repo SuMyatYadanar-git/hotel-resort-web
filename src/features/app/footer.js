@@ -37,16 +37,16 @@ const Footer = props => {
           {media.mobile || (
             <div className="align-self-center">
               <a href="www.facebook.com">
-                <i className="fa fa-facebook pr-3" />
+                <i className="fab fa-facebook pr-3" />
               </a>
               <a href="#">
-                <i className="fa fa-twitter pr-3" />
+                <i className="fab fa-twitter pr-3" />
               </a>
               <a href="#">
-                <i className="fa fa-instagram pr-3" />
+                <i className="fab fa-instagram pr-3" />
               </a>
               <a href="#">
-                <i className="fa fa-youtube pr-3" />
+                <i className="fab fa-youtube pr-3" />
               </a>
             </div>
           )}
@@ -113,11 +113,11 @@ const Footer = props => {
           style={{ color: Colors.textwhite, opacity: 0.5 }}
         >
           <div className="d-flex flex-row flex-nowrap justify-content-between">
-            <span>Copyright Ⓒ by KUMO Solutions</span>
+            <span>Copyright Ⓒ by Co.Ltd </span>
             <span>
-              <i className="fa fa-cc-paypal fa-2x px-1"></i>
-              <i className="fa fa-cc-mastercard fa-2x px-1"></i>
-              <i className="fa fa-cc-visa fa-2x px-1"></i>
+              <i className="fab fa-cc-paypal fa-2x px-1"></i>
+              <i className="fab fa-cc-mastercard fa-2x px-1"></i>
+              <i className="fab fa-cc-visa fa-2x px-1"></i>
             </span>
           </div>
         </div>

@@ -1,7 +1,7 @@
 import React from "react";
 import { withMedia } from "react-media-query-hoc";
 
-import Navbar from "./navbar/navbar";
+import Navbar from "./navbar";
 
 const Header = props => {
   const { bgimg, title, media, text } = props;

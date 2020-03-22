@@ -8,7 +8,7 @@ import Event from "../components/event";
 import RoomsGallery from "../components/roomsGallery";
 import Services from "../components/services";
 import HomeCarousel from "../components/carousel";
-import Navbar from "../../app/navbar/navbar";
+import Navbar from "../../app/navbar";
 
 const Home = props => {
   const { media } = props
